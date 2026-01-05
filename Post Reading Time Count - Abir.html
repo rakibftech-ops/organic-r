@@ -1,0 +1,28 @@
+<!-- Post Reading Time Count - Abir -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const WPM = 183;
+    const contentElementReadingTime = document.querySelector(
+      ".reading_time_count_content"
+    );
+    const readingTimeContainers = document.querySelectorAll(
+      ".reading-time-custom"
+    );
+
+    if (contentElementReadingTime && readingTimeContainers.length > 0) {
+      const textContent =
+        contentElementReadingTime.innerText ||
+        contentElementReadingTime.textContent;
+      const wordCount = textContent.trim().split(/\s+/).length;
+      const readingTimeMinutes = Math.ceil(wordCount / WPM);
+
+      const readingTimeText = ` | Reading Time: ${readingTimeMinutes} minute${
+        readingTimeMinutes > 1 ? "s" : ""
+      }`;
+
+      readingTimeContainers.forEach((container) => {
+        container.textContent = readingTimeText;
+      });
+    }
+  });
+</script>
