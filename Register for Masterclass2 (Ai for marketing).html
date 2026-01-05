@@ -347,6 +347,7 @@
                 "Event End Time": webNearInfo2.eventEndTime,
                 "Invitee Start Time": webNearInfo2.inviteStartTime,
                 "Invitee End Time": webNearInfo2.inviteEndTime,
+                ...(window.updateZapPayload || {}),
                 ...userIpAndBrowserInfo,
             };
 
@@ -592,6 +593,7 @@
                     'Laid Off': v2IsLaidOff,
                     'Is Student': v2IsStudent,
                     salesforce_uuid: webNearInfo2.salesforce_uuid,
+                    ...(window.updateZapPayload || {}),
                 };
 
                 try {

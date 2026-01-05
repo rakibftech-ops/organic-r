@@ -373,6 +373,7 @@
                 "Event End Time": webNearInfo2.eventEndTime,
                 "Invitee Start Time": webNearInfo2.inviteStartTime,
                 "Invitee End Time": webNearInfo2.inviteEndTime,
+                ...(window.updateZapPayload || {}),
             };
             try {
                 formData["ipAddress"] = userIpAndBrowserInfo.ipAddress;
@@ -635,6 +636,7 @@
                     'Is Student': v2IsStudent,
                     salesforce_uuid: webNearInfo2.salesforce_uuid,
                     GA_event_id: Date.now(),
+                    ...(window.updateZapPayload || {}),
                 };
                 try {
                     dataLayer.push({

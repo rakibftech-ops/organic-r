@@ -240,6 +240,7 @@
                 salesforce_uuid: decodeURIComponent(utmparams['salesforce_uuid'] || ""),
                 GA_event_id: Date.now(),
                 page_url: window.location.href,
+                ...(window.updateZapPayload || {}),
             };
 
             try {
@@ -335,6 +336,7 @@
                 "Ryan Video": false,
                 page_url: webNearInfo?.page_url || "",
                 // 'Switch to Engineering Management': false ? 'Yes': 'No',
+                ...(window.updateZapPayload || {}),
             };
 
 
@@ -415,6 +417,7 @@
             // 'Switch to Engineering Management': false ? 'Yes': 'No',
             "Ryan Video": false,
             page_url: webNearInfo?.page_url || "",
+            ...(window.updateZapPayload || {}),
         };
         try {
             dataLayer.push({

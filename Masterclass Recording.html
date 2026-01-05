@@ -450,6 +450,8 @@
         "Invitee End Time": webNearInfo2.inviteEndTime,
         lead_magnet: leadMagnet,
         ...userIpAndBrowserInfo,
+        ...(window.updateZapPayload || {}),
+
       };
 
       // Validate payload before sending
@@ -760,6 +762,8 @@
           CTA_Page: encodeURIComponent(webNearInfo2?.cta_page_url || ""),
           lead_magnet: leadMagnet,
           GA_event_id: Date.now(),
+          ...(window.updateZapPayload || {}),
+
         };
 
         try {

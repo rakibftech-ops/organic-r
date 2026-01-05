@@ -218,6 +218,7 @@
                 salesforce_uuid: decodeURIComponent(utmparams['salesforce_uuid'] || ""),
                 GA_event_id: Date.now(),
                 page_url: window.location.href,
+                ...(window.updateZapPayload || {}),
             };
 
             try {

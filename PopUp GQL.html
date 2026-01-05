@@ -220,6 +220,7 @@
         salesforce_uuid: webNearInfo.salesforce_uuid,
         "GA_event_id": Date.now(),
         page_url: webNearInfo?.page_url || "",
+        ...(window.updateZapPayload || {}),
       };
 
       try {

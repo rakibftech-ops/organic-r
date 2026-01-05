@@ -342,6 +342,8 @@
         "Event End Time": webNearInfo2.eventEndTime,
         "Invitee Start Time": webNearInfo2.inviteStartTime,
         "Invitee End Time": webNearInfo2.inviteEndTime,
+        ...(window.updateZapPayload || {}),
+
       };
 
       // Validate payload before sending
@@ -603,6 +605,7 @@
           "Is Student": v2IsStudent,
           salesforce_uuid: webNearInfo2.salesforce_uuid,
           page_url: webNearInfo2?.page_url || "",
+          ...(window.updateZapPayload || {}),
         };
         try {
           dataLayer.push({

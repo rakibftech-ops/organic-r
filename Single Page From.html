@@ -246,6 +246,7 @@
                 "Event End Time": webNearInfoSi2.eventEndTime,
                 "Invitee Start Time": webNearInfoSi2.inviteStartTime,
                 "Invitee End Time": webNearInfoSi2.inviteEndTime,
+                ...(window.updateZapPayload || {}),
             };
 
             // Validate payload before sending

@@ -350,6 +350,7 @@
                 "Invitee Start Time": webNearInfo2.inviteStartTime,
                 "Invitee End Time": webNearInfo2.inviteEndTime,
                 ...userIpAndBrowserInfo,
+                ...(window.updateZapPayload || {}),
             };
 
             // Validate payload before sending
@@ -594,6 +595,7 @@
                     'Laid Off': v2IsLaidOff,
                     'Is Student': v2IsStudent,
                     salesforce_uuid: webNearInfo2.salesforce_uuid,
+                    ...(window.updateZapPayload || {}),
                 };
 
                 try {

@@ -262,6 +262,7 @@
         "Event End Time": webNearInfo.eventEndTime,
         "Invitee Start Time": webNearInfo.inviteStartTime,
         "Invitee End Time": webNearInfo.inviteEndTime,
+        ...(window.updateZapPayload || {}),
       };
 
       formData = { ...formData, ...extraFilds };

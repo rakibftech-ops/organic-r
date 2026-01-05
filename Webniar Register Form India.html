@@ -715,6 +715,7 @@
         "Invitee End Time": getCheckWebnear.getAttribute(
           "data-invitee_endtime"
         ),
+        ...(window.updateZapPayload || {}),
       };
 
       // Validate payload before sending

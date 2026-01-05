@@ -242,6 +242,7 @@
         "phone_number_full": webNearInfo2.fPhoneNumber,
         "is_exit_intent_popup": webNearInfo2.is_exit_intent_popup,
         "irclickid": webNearInfo2.irclickid,
+        ...(window.updateZapPayload || {}),
         ...userIpAndBrowserInfo
       };
 
@@ -513,6 +514,7 @@
           'Is Student': v2IsStudent,
           salesforce_uuid: webNearInfo2.salesforce_uuid,
           page_url: webNearInfo2?.page_url || "",
+          ...(window.updateZapPayload || {}),
         };
 
         try {

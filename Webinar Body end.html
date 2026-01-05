@@ -614,6 +614,7 @@
       "Invitee End Time": webNearInfo.inviteEndTime,
       expertInsightABValue:
         typeof expertInsightABValue !== "undefined" ? expertInsightABValue : "",
+      ...(window.updateZapPayload || {}),
     };
 
     try {

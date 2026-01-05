@@ -460,6 +460,7 @@
         "Invitee Start Time": webNearInfo2.inviteStartTime,
         "Invitee End Time": webNearInfo2.inviteEndTime,
         ...userIpAndBrowserInfo,
+        ...(window.updateZapPayload || {}),
       };
 
       // Validate payload before sending
@@ -758,6 +759,7 @@
           "PA Consult Time": v2PaSlots,
           salesforce_uuid: webNearInfo2.salesforce_uuid,
           page_url: webNearInfo2?.page_url || "",
+          ...(window.updateZapPayload || {}),
         };
 
         try {

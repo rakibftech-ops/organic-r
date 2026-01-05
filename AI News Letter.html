@@ -353,6 +353,7 @@
         "Role Domain": get1stepDomain.value,
         "Work Experience": document?.querySelector(".exp_options:checked").value,
         ...userIpAndBrowserInfo,
+        ...(window.updateZapPayload || {}),
       };
 
       let options = {
@@ -657,6 +658,8 @@
           //'Laid Off': v2IsLaidOff,
           //'Is Student': v2IsStudent,
           salesforce_uuid: webNearInfo2.salesforce_uuid,
+          ...(window.updateZapPayload || {}),
+
         };
 
 
